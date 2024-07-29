@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cryptomusapi"
+version = "0.1.0"
+description = ""
+authors = ["nihhin <radim@radim.radim>"]
+readme = "README.md"
+packages = [{include = "CryptomusAPI"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+adaptix = "^3.0.0b7"
+aiohttp = "^3.9.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

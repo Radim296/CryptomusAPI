@@ -1,7 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime
-from typing import Any
+from typing import Any, Optional
 
 
 @dataclass
@@ -18,21 +18,22 @@ class PaymentInfoResponse:
     created_at: datetime
     updated_at: datetime
     commission: float
-    payment_amount: float | None = None
-    payment_amount_usd: float | None = None
-    payer_amount: float | None = None
-    additional_data: str | None = None
-    payer_amount_exchange_rate: float | None = None
-    discount_percent: float | None = None
-    discount: float | None = None
-    payer_currency: str | None = None
-    currency: str | None = None
-    comments: str | None = None
-    merchant_amount: float | None = None
-    network: str | None = None
-    address: str | None = None
-    from_: str | None = None
-    txid: str | None = None
+    payment_amount: Optional[float] = None
+    payment_amount_usd: Optional[float] = None
+    payer_amount: Optional[float] = None
+    additional_data: Optional[str] = None
+    payer_amount_exchange_rate: Optional[float] = None
+    discount_percent: Optional[float] = None
+    discount: Optional[float] = None
+    payer_currency: Optional[str] = None
+    currency: Optional[str] = None
+    comments: Optional[str] = None
+    merchant_amount: Optional[float] = None
+    network: Optional[str] = None
+    address: Optional[str] = None
+    from_: Optional[str] = None
+    txid: Optional[str] = None
+    address_qr_code: Optional[str] = None
 
     @classmethod
     def from_json(cls, data: dict[str, Any]) -> PaymentInfoResponse:

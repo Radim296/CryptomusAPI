@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from decimal import Decimal
+from typing import Optional, Union
 
 from ..enums import CryptoCurrency, FiatCurrency
 
@@ -10,7 +11,7 @@ class MoneyAmount:
     payment_amount: Decimal
     payment_amount_usd: Decimal
     payer_amount: Decimal
-    payer_amount_exchange_rate: Decimal | None
+    payer_amount_exchange_rate: Optional[Decimal]
     discount_percent: Decimal
     discount: Decimal
-    payer_currency: CryptoCurrency | FiatCurrency
+    payer_currency: Union[CryptoCurrency, FiatCurrency]

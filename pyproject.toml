@@ -9,7 +9,7 @@ packages = [{include = "CryptomusAPI"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 adaptix = "^3.0.0b7"
-aiohttp = "^3.9.5"
+aiohttp = "^3.9.0"
 
 
 [build-system]
